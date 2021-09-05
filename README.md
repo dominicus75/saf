@@ -7,58 +7,49 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Full-stack fejlesztői feladat
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 1. Környezet, leírás
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Az **Új Nyugat Gimnázium** úgy döntött, hogy egy új, felhő alapú adminisztrációs szoftvert valósít meg. A felvételi iroda szeretné összegyűjteni és ebben az új programban tárolni a diákok legfontosabb adatait. Ráadásul azt is nyilván kell tartaniuk, hogy a diákok melyik tanulócsoportba iratkoztak be.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Minden egyes tanulóról az alábbi részletezettséggel szeretnénk tárolni az adatokat:
+- név
+- nem
+- születési hely
+- születési idő
+- géplevélcím
+- tanulócsoport (legfeljebb 4 fakultás diákonként)
 
-## Learning Laravel
+### A tanulócsoportok tulajdonságai:
+- a csoport neve
+- a csoport vezetője (szöveges formában, vagyis nem referenciaként)
+- tantárgy (szöveges formában)
+- a tanulócsoprt (gondolom létrehozásának, nem egyértelmű a megfogalmazás) ideje
+- beíratkozott diákok
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 2. A feladat
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Hozz létre egy adminisztrációs rendszert, ahol az iskola tárolhatja a fent említett adatokat a diákokról és a tanulócsoportokról. Amíg ezen dolgozol, kéretik odafigyelni a következőkre:
 
-## Laravel Sponsors
+- János a felvételi irodáról kért egy oldalakra bontható, szűrhető listát a tanulókról (alapértelmezés szerint 10 fő/oldal felbontásban, ahol rá tud keresni a diák nevére és egy jelölőnégyzet segítségével tanulócsoportot tud hozzárendelni). Ezen felül szeretnénk, ha megjelenne az is, hogy egy tanuló melyik csoportba jelentkezett.
+- Mártának, János aszisztensének a következő műveleteket kell elvégeznie a jobb sorsra érdemes diákkal:
+    - Új diák hozzáadása
+    - Létező diák szerkesztése
+    - Diák törlése (a hozzá kapcsolódó jelentkezésekkel együtt)
+    - Diák hozzárendelése egy tanulócsoporthoz (kéretik figyelemmel lenni az iskola idevonatkozó politikájára, mely szerint egy diák legfeljebb 4 csoport tagja lehet egyidejűleg)
+    - Diák eltávolítása egy tanulócsoportból.
+- Minden diák értesítessék géplevél útján minden a profilját érintő változásról. Például, ha egy diák hozzá lett adva egy csoporthoz, kapjon egy e-mail-t erről. Levélküldésre az iskola a Sparkpost SMTP szerverét használja (http://sparkpost.com/), de ezt nem muszály implementálni a projektben.
+- A srácok az irodában szeretnék megnézni a programot, mielőtt az elkészülne, ezért regisztrációs és belépési felületet még nem kell készíteni hozzá.
+- A program kezelőfelületének elrendezésének a csatolt ábra és leírás alapján kellene elkészíteni.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 3. Kezelőfelület és elrendezés
 
-### Premium Partners
+Jony Ive (*a névnek véletlenszerűnek kell lennie - ez gondolom valami szójáték vagy vicc, amit nem értek*), az iskola designer-e létrehozott egy egyszerű elrendezés-tervet. Az iskola hivatalnokaival való első találkozásig kizárólag a nyitóoldal frontend-jét kell elkészíteni, viszont a többi oldalon nem feltétlenül kell követni ezt az elrendezési tervet. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+![Imgur](https://imgur.com/E6i2w9c.png)
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Elvárások:
+- forráskód (*gondolom github-ra felpakolva*)
+- adatbázismentés, mintaadatokkal
+- lépésről lépésre telepítési útmutató, pdf formátumban
