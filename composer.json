@@ -1,9 +1,17 @@
 {
-    "name": "laravel/laravel",
+    "name": "dominicus75/saf",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "Student Administration Framework.",
+    "keywords": ["framework", "laravel", "saf", "sample"],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Domokos Endre János",
+            "email": "domokos.endrejanos@gmail.com",
+            "homepage": "https://github.com/dominicus75",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
