@@ -1,4 +1,4 @@
-![Imgur](https://imgur.com/HxTRt1E!)
+![Imgur](https://imgur.com/HxTRt1E.png)
 
 # Full-stack fejlesztői feladat
 
