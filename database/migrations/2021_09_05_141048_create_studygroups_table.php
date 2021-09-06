@@ -15,9 +15,9 @@ class CreateStudygroupsTable extends Migration
     {
         Schema::create('studygroups', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('leader');
-            $table->string('subject');
+            $table->string('name', 50);
+            $table->string('leader', 50);
+            $table->string('subject', 50);
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
         });

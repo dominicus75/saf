@@ -15,15 +15,13 @@ class CreateEnrollingsTable extends Migration
     {
         Schema::create('enrollings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-        });
-
-        Schema::table('enrollings', function (Blueprint $table) {
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('stgroup_id');
+            $table->timestamps();
             $table->foreign('student_id')->references('id')->on('students');
             $table->foreign('stgroup_id')->references('id')->on('studygroups');
         });
+
     }
 
     /**
