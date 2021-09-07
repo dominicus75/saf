@@ -31,6 +31,10 @@ class CreateEnrollingsTable extends Migration
      */
     public function down()
     {
+        Schema::table('enrollings', function (Blueprint $table) {
+            $table->dropForeign(['student_id']);
+            $table->dropForeign(['stgroup_id']);
+        });
         Schema::dropIfExists('enrollings');
     }
 }
