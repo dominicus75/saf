@@ -17,7 +17,7 @@ class CreateStudygroupsTable extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('leader', 50);
-            $table->string('subject', 50);
+            $table->string('subject', 200);
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->useCurrent();
         });

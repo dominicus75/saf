@@ -17,7 +17,8 @@ class CreateEnrollingsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('stgroup_id');
-            $table->timestamps();
+            $table->dateTime('created_at')->useCurrent();
+            $table->dateTime('updated_at')->useCurrent();
             $table->foreign('student_id')->references('id')->on('students');
             $table->foreign('stgroup_id')->references('id')->on('studygroups');
         });

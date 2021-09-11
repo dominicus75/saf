@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             StudentSeeder::class,
+            StudyGroupSeeder::class,
+            EnrollingSeeder::class
         ]);
     }
 }
