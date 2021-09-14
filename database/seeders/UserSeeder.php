@@ -24,6 +24,7 @@ class UserSeeder extends Seeder
                     'name'       => 'John Admission',
                     'email'      => 'john.admission@new-western.edu',
                     'password'   => Hash::make('P@$$w0rd'),
+                    'avatar'     => 'https://randomuser.me/api/portraits/men/87.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],
@@ -32,6 +33,7 @@ class UserSeeder extends Seeder
                     'name'       => 'Martha Assistant',
                     'email'      => 'martha.assistant@new-western.edu',
                     'password'   => Hash::make('P@$$w0rd'),
+                    'avatar'     => 'https://randomuser.me/api/portraits/women/81.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ]

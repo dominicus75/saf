@@ -20,6 +20,7 @@ class CreateStudentsTable extends Migration
             $table->string('birth_place', 40);
             $table->date('birth_date');
             $table->string('email', 40);
+            $table->string('avatar', 60);
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->useCurrent();
         });
