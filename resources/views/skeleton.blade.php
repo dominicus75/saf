@@ -10,6 +10,12 @@
     </style>
 </head>
 <body>
+<header>
+
+</header>
 @yield('main')
+<footer>
+
+</footer>
 </body>
 </html>
