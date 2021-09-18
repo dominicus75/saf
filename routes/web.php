@@ -17,4 +17,8 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', [StudentController::class, 'index']);
-Route::get('/student/{id}', [StudentController::class, 'show']);
+
+Route::resources([
+    'students' => StudentController::class,
+    'studygroups' => StudyGroupController::class,
+]);

@@ -1,5 +1,5 @@
 @extends('skeleton')
-@section('title', 'Diákok')
+@section('title', 'Students')
 
 @section('main')
 <main>
@@ -17,17 +17,17 @@
         <tbody>
     @foreach ($students as $student)
         <tr>
-                <td><a href="/student/{{ $student->id }}"><img src="{{ $student->avatar }}" alt="{{ $student->avatar }}"></a></td>
-                <td><a href="/student/{{ $student->id }}">{{ $student->name }}</a></td>
+                <td><a href="/students/{{ $student->id }}"><img src="{{ $student->avatar }}" alt="{{ $student->avatar }}"></a></td>
+                <td><a href="/students/{{ $student->id }}">{{ $student->name }}</a></td>
                 <td>{{ $student->sex }}</td>
                 <td>{{ $student->birth_place }}</td>
                 <td>{{ $student->birth_date }}</td>
                 <td>
 @forelse($student->studygroups as $group)
 @if ($loop->last)
-                    <a href="studygroup/{{ $group->id }}">{{ $group->name }}</a>
+                    <a href="studygroups/{{ $group->id }}">{{ $group->name }}</a>
 @else
-                    <a href="studygroup/{{ $group->id }}">{{ $group->name }}</a>,
+                    <a href="studygroups/{{ $group->id }}">{{ $group->name }}</a>,
 @endif
 @empty
                     <strong>- none -</strong>

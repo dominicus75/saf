@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Studygroup;
 
 class StudyGroupController extends Controller
 {
@@ -13,7 +14,8 @@ class StudyGroupController extends Controller
      */
     public function index()
     {
-        //
+        $groups = Studygroup::paginate(10);
+        return view('layouts.studygroups', compact('groups'));
     }
 
     /**
@@ -45,7 +47,8 @@ class StudyGroupController extends Controller
      */
     public function show($id)
     {
-        //
+        $group = Studygroup::find($id);
+        return view('layouts.studygroup', compact('group'));
     }
 
     /**

@@ -11,11 +11,12 @@
 </head>
 <body>
 <header>
-
+    <a href="/"><img src="/img/logo.png" alt="logo"></a>
+    <p>Student Administration Framework</p>
 </header>
 @yield('main')
 <footer>
-
+    <p>&copy; New-Western High School, 2021.</p>
 </footer>
 </body>
 </html>
