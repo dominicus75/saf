@@ -1,3 +1,14 @@
+@if (Request::is('students*'))
+    @section('class01', 'current')
+    @section('class02', '')
+@elseif(Request::is('studygroups*'))
+    @section('class01', '')
+    @section('class02', 'current')
+@else
+    @section('class01', '')
+    @section('class02', '')
+@endif
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -30,7 +41,7 @@
         }
         html {
             font-family: "Gill Sans", arial, sans-serif;
-            font-size: 2.5vh;
+            font-size: 2vmin;
             background-color: #e8ecef;
         }
         body {
@@ -61,8 +72,9 @@
             color: black;
             font-weight: bold;
         }
-        a:hover { color: #ed7b3d; }
         li.current > a { color: #2cc0d5; }
+        a:hover, li.current > a:hover { color: #ed7b3d; }
+        li.current > a:hover {  }
 
         /* Site header */
 
@@ -71,7 +83,7 @@
         }
 
         img#logo {
-            height: 5vh;
+            height: 5rem;
         }
 
         header.saf > p {
@@ -91,8 +103,10 @@
             border-right: 1px solid #dbe0e4;
             border-left: 1px solid #dbe0e4;
             border-radius: .5rem .5rem 0 0;
-            width: 20vw;
+            width: 33%;
             padding: 2rem;
+            color: #9ca8af;
+
         }
 
         ul.site li.current {
@@ -106,6 +120,7 @@
             background-color: #ffffff;
             border: 1px solid #dbe0e4;
             border-radius: 0 1rem 1rem 1rem;
+            padding: 2vmin 5vmax;
         }
 @yield('style', '')
 
@@ -134,25 +149,13 @@
 </header>
 <nav>
     <ul class="site">
-@if (Request::is('students*'))
-        <li class='current'>
+        <li class="@yield('class01', '')">
             <a href="/students">STUDENTS</a>
+            <p>{{ $data['students'] }} students registered</p>
         </li>
-        <li>
+        <li class="@yield('class02', '')">
             <a href="/studygroups">STUDY GROUPS</a>
-@elseif(Request::is('studygroups*'))
-        <li>
-            <a href="/students">STUDENTS</a>
-        </li>
-        <li class='current'>
-            <a href="/studygroups">STUDY GROUPS</a>
-@else
-        <li>
-            <a href="/students">STUDENTS</a>
-        </li>
-        <li>
-            <a href="/studygroups">STUDY GROUPS</a>
-@endif
+            <p>{{ $data['groups'] }} studygroups with {{ $data['with_students'] }} students</p>
         </li>
     </ul>
 </nav>
