@@ -27,15 +27,31 @@ class StudentController extends Controller
         $groups   = $StudyGroup->all();
         if(is_null($choosen)) {
             $students = $student->paginate(10);
+            $students->setPath('students');
+            return view('layouts.students', compact('students', 'groups'));
         } else {
             $selectedGroups = $StudyGroup->findMany($choosen);
             $collection     = new Collection();
             foreach($selectedGroups as $group) {
                 foreach($group->students as $student) { $collection->add($student); }
             }
-            $students = new LengthAwarePaginator($collection, $collection->count(), 10);
+            $currentPage      = LengthAwarePaginator::resolveCurrentPage('page');
+            $currentPageItems = $collection->slice(($currentPage - 1) * 10, 10);
+            $query            = $request->query();
+            unset($query['page']);
+            $students = new LengthAwarePaginator(
+                $currentPageItems,
+                $collection->count(),
+                10,
+                $currentPage,
+                [
+                    'pageName' => 'page',
+                    'path' => \Illuminate\Pagination\LengthAwarePaginator::resolveCurrentPath(),
+                    'query' => $query
+                ]
+            );
+            return view('includes.studentlist', compact('students', 'groups'));
         }
-        return view('layouts.students', compact('students', 'groups'));
     }
 
     /**
