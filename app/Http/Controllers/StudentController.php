@@ -50,7 +50,11 @@ class StudentController extends Controller
                     'query' => $query
                 ]
             );
-            return view('includes.studentlist', compact('students', 'groups'));
+            if($request->hasHeader('X-Requested-With')) {
+                return view('includes.studentlist', compact('students', 'groups'));
+            } else {
+                return view('layouts.students', compact('students', 'groups'));
+            }
         }
     }
 

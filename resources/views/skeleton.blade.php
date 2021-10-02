@@ -173,5 +173,6 @@
         Phone: <a href="tel:+14251234567" itemprop="telephone">(425) 123-4567</a>
     </address>
 </footer>
+@yield('script')
 </body>
 </html>

@@ -39,10 +39,42 @@
             <input type="checkbox" id="{{ $group->id }}" name="choosen[]" value="{{ $group->id }}">
             <label for="{{ $group->id }}">{{ $group->name }}</label><br>
 @endforeach
-<input type="submit" value="Chosse">
+            <input type="button" id="choose" value="Choose groups">
         </fieldset>
     </form>
+    <section id="studentlist">
     @include('includes.studentlist')
-    </tbody>
-    </table>
+    </section>
+@endsection
+
+@section('script')
+<script>
+    document.getElementById("choose").addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        var choosen = document.querySelectorAll('input[type=checkbox]:checked');
+        var queryString = '?';
+
+        for (var i = 0; i < choosen.length; i++) {
+            if(i < choosen.length - 1) {
+                queryString += 'choosen[]='+choosen[i].value+'&';
+            } else {
+                queryString += 'choosen[]='+choosen[i].value;
+            }
+        }
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("studentlist").innerHTML = this.responseText;
+            }
+        };
+
+        xhttp.open("GET", "/students"+queryString, true);
+        xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhttp.send();
+
+    });
+</script>
 @endsection
