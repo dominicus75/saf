@@ -159,7 +159,7 @@
         </li>
     </ul>
 </nav>
-<main>
+<main id='main'>
 @yield('main')
 </main>
 <footer>

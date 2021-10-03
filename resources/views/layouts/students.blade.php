@@ -49,32 +49,12 @@
 
 @section('script')
 <script>
-    document.getElementById("choose").addEventListener("click", function(event){
 
-        event.preventDefault();
+    var section = 'studentlist';
 
-        var choosen = document.querySelectorAll('input[type=checkbox]:checked');
-        var queryString = '?';
+    @include('includes.ajax')
 
-        for (var i = 0; i < choosen.length; i++) {
-            if(i < choosen.length - 1) {
-                queryString += 'choosen[]='+choosen[i].value+'&';
-            } else {
-                queryString += 'choosen[]='+choosen[i].value;
-            }
-        }
+    @include('includes.choosen')
 
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("studentlist").innerHTML = this.responseText;
-            }
-        };
-
-        xhttp.open("GET", "/students"+queryString, true);
-        xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        xhttp.send();
-
-    });
 </script>
 @endsection

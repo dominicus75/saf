@@ -12,10 +12,14 @@ class StudyGroupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $groups = Studygroup::paginate(10);
-        return view('layouts.studygroups', compact('groups'));
+        if($request->hasHeader('X-Requested-With') || !is_null($request->query('page'))) {
+            return view('includes.grouplist', compact('groups'));
+        } else {
+            return view('layouts.studygroups', compact('groups'));
+        }
     }
 
     /**

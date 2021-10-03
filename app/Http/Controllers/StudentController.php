@@ -28,7 +28,6 @@ class StudentController extends Controller
         if(is_null($choosen)) {
             $students = $student->paginate(10);
             $students->setPath('students');
-            return view('layouts.students', compact('students', 'groups'));
         } else {
             $selectedGroups = $StudyGroup->findMany($choosen);
             $collection     = new Collection();
@@ -50,11 +49,11 @@ class StudentController extends Controller
                     'query' => $query
                 ]
             );
-            if($request->hasHeader('X-Requested-With')) {
-                return view('includes.studentlist', compact('students', 'groups'));
-            } else {
-                return view('layouts.students', compact('students', 'groups'));
-            }
+        }
+        if($request->hasHeader('X-Requested-With') || !is_null($request->query('page'))) {
+            return view('includes.studentlist', compact('students', 'groups'));
+        } else {
+            return view('layouts.students', compact('students', 'groups'));
         }
     }
 
