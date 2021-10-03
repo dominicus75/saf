@@ -17,9 +17,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAF | @yield('title', '')</title>
     <style>
-        /* http://meyerweb.com/eric/tools/css/reset/
-        v2.0 | 20110126
-        License: none (public domain)
+        /*
+           http://meyerweb.com/eric/tools/css/reset/
+           v2.0 | 20110126
+           License: none (public domain)
         */
         html, body, div, span, h1, h2, h3, h4, h5, h6,
         p, blockquote, pre, a, address, cite, code,
@@ -64,14 +65,46 @@
             border-spacing: 0;
         }
 
+	    /*
+           Font Awesome 4.6.1 by @davegandy
+           License: http://fontawesome.io/license
+           (Font: SIL OFL 1.1, CSS: MIT License)
+        */
+
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 1rem/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+        }
+
+        .fa-inverse { color: #ffffff; }
+        .fa-user-o:before { content: "\f2c0"; }
+        .fa-edit:before { content: "\f044"; }
+        .fa-search:before { content: "\f002"; }
+        .fa-arrow-left:before { content: "\f060"; }
+        .fa-arrow-right:before { content: "\f061"; }
+        .fa-chevron-left:before { content: "\f053"; }
+        .fa-chevron-right:before { content: "\f054"; }
+        .fa-check-square-o:before { content: "\f046"; }
+
         /* Common */
 
         nav ul li { display: inline-block; }
+
         a {
             text-decoration: none;
             color: black;
             font-weight: bold;
         }
+
         li.current > a { color: #2cc0d5; }
         a:hover, li.current > a:hover { color: #ed7b3d; }
         li.current > a:hover {  }
