@@ -17,11 +17,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAF | @yield('title', '')</title>
     <style>
+
         /*
            http://meyerweb.com/eric/tools/css/reset/
            v2.0 | 20110126
            License: none (public domain)
         */
+
         html, body, div, span, h1, h2, h3, h4, h5, h6,
         p, blockquote, pre, a, address, cite, code,
         del, dfn, em, img, strike, strong, sub, sup,
@@ -37,12 +39,12 @@
         }
         /* HTML5 display-role reset for older browsers */
         article, aside, details, figcaption, figure,
-        footer, header, hgroup, menu, nav, section {
+        footer, header, hgroup, menu, nav, section, main {
             display: block;
         }
         html {
             font-family: "Gill Sans", arial, sans-serif;
-            font-size: 2vmin;
+            font-size: 1.8vmin;
             background-color: #e8ecef;
         }
         body {
@@ -65,46 +67,14 @@
             border-spacing: 0;
         }
 
-	    /*
-           Font Awesome 4.6.1 by @davegandy
-           License: http://fontawesome.io/license
-           (Font: SIL OFL 1.1, CSS: MIT License)
-        */
-
-        @font-face {
-            font-family: 'FontAwesome';
-            src: url('/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        .fa {
-            display: inline-block;
-            font: normal normal normal 1rem/1 FontAwesome;
-            font-size: inherit;
-            text-rendering: auto;
-        }
-
-        .fa-inverse { color: #ffffff; }
-        .fa-user-o:before { content: "\f2c0"; }
-        .fa-edit:before { content: "\f044"; }
-        .fa-search:before { content: "\f002"; }
-        .fa-arrow-left:before { content: "\f060"; }
-        .fa-arrow-right:before { content: "\f061"; }
-        .fa-chevron-left:before { content: "\f053"; }
-        .fa-chevron-right:before { content: "\f054"; }
-        .fa-check-square-o:before { content: "\f046"; }
-
         /* Common */
 
         nav ul li { display: inline-block; }
-
         a {
             text-decoration: none;
             color: black;
             font-weight: bold;
         }
-
         li.current > a { color: #2cc0d5; }
         a:hover, li.current > a:hover { color: #ed7b3d; }
         li.current > a:hover {  }
@@ -113,12 +83,11 @@
 
         header.saf {
             margin-bottom: 2vh;
+            margin-left: 2vmax;
         }
-
         img#logo {
             height: 5rem;
         }
-
         header.saf > p {
             font-size: .8rem;
             color: #9ca8af;
@@ -127,21 +96,19 @@
         /* Site navigation */
 
         ul.site {
-            margin-bottom: -1px;
+            margin-bottom: -0.5px;
         }
-
         ul.site li {
             background-color: #f4f7f9;
             border-top: 1px solid #dbe0e4;
             border-right: 1px solid #dbe0e4;
+            border-bottom: 1px solid #dbe0e4;
             border-left: 1px solid #dbe0e4;
             border-radius: .5rem .5rem 0 0;
             width: 33%;
-            padding: 2rem;
+            padding: 2vmax;
             color: #9ca8af;
-
         }
-
         ul.site li.current {
             background-color: #ffffff;
             border-bottom: 1px solid #ffffff;
@@ -153,10 +120,9 @@
             background-color: #ffffff;
             border: 1px solid #dbe0e4;
             border-radius: 0 1rem 1rem 1rem;
-            padding: 2vmin 5vmax;
+            padding: 2vmax;
         }
 @yield('style', '')
-
         /* Footer */
 
         footer {
@@ -166,7 +132,6 @@
             color: #9ca8af;
             padding: 1rem;
         }
-
         footer a { color: inherit; }
         footer p {
             text-transform: uppercase;
