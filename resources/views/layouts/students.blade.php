@@ -35,8 +35,19 @@
             border-left: 0;
             border-radius: 0 3px 3px 0;
         }
-        input#nsearch, button#nsearchb {
+        input#nsearch, button#nsearchb, ul#namelist {
             background-color: #e4e8eb;
+        }
+        ul#namelist {
+            display: none;
+            border: 1px solid #9ca8af;
+            border-radius: 0 0 3px 3px;
+            z-index: 1;
+        }
+        input#nsearch:focus ~ ul#namelist, input#nsearch:focus-within ~ ul#namelist {
+            display: block;
+        }
+        ul#namelist a {
         }
         legend {
             vertical-align: middle;
@@ -67,9 +78,17 @@
 
 @section('main')
     <aside>
-        <form method="get" id="students">
-            <input type="search" id="nsearch" name="students" placeholder="Search for name">
+        <form method="get" action="/search" id="students">
+            <input type="search" id="nsearch" name="name" placeholder="Search for name">
             <button id="nsearchb"><i class="fa fa-search"></i></button>
+            <ul id="namelist">
+                <li><a href="/students/1">student 1</a></li>
+                <li><a href="/students/2">student 2</a></li>
+                <li><a href="/students/3">student 3</a></li>
+                <li><a href="/students/4">student 4</a></li>
+                <li><a href="/students/5">student 5</a></li>
+                <li><a href="/students/6">student 6</a></li>
+            </ul>
         </form>
         <form method="get" id="groups">
             <fieldset>
@@ -90,11 +109,32 @@
 @section('script')
 <script>
 
-    var section = 'studentlist';
-
     @include('js.ajax')
 
-    @include('js.choosen')
+    @include('js.paginator')
+
+    window.addEventListener("load", function(event){ paginator('studentlist'); });
+
+    document.getElementById("choose").addEventListener("click", function(event){
+        event.preventDefault();
+        var choosen = document.querySelectorAll('input[type=checkbox]:checked');
+        var url     = '/students?';
+        for (var i = 0; i < choosen.length; i++) {
+            if(i < choosen.length - 1) {
+                url += 'choosen[]='+choosen[i].value+'&';
+            } else {
+                url += 'choosen[]='+choosen[i].value;
+            }
+        }
+        ajax({
+            type: 'GET',
+            url: url,
+            success: function(response) {
+                document.getElementById('studentlist').innerHTML = response;
+                paginator('studentlist');
+            }
+        });
+    });
 
 </script>
 @endsection

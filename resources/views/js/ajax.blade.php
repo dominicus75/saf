@@ -1,25 +1,15 @@
 
-    function ajax(url, section){
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById(section).innerHTML = this.responseText;
-                paginator();
+    function ajax(request){
+        xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                if(typeof request.success === "function") {
+                    request.success(xhr.responseText);
+                }
             }
         };
-        xhttp.open("GET", url, true);
-        xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        xhttp.send();
+        typeof request.url === "undefined" ? request.url = location.href : request.url;
+        xhr.open(request.type, request.url, true);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        typeof request.data === "undefined" ? xhr.send() : xhr.send(request.data);
     }
-
-    function paginator(){
-        var paginator = document.getElementsByClassName('paginator');
-        for(var i = 0; i < paginator.length; i++) {
-            paginator[i].onclick = function(event){
-                event.preventDefault();
-                ajax(this.href, section);
-            };
-        }
-    }
-
-    window.addEventListener("load", function(event){ paginator(); });

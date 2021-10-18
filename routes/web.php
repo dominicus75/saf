@@ -22,3 +22,6 @@ Route::resources([
     'students' => StudentController::class,
     'studygroups' => StudyGroupController::class,
 ]);
+
+Route::get('/search', [StudentController::class, 'search']);
+

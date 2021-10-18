@@ -7,8 +7,7 @@ use App\Models\Studygroup;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
-
-
+use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
 {
@@ -50,7 +49,18 @@ class StudentController extends Controller
                 ]
             );
         }
-        if($request->hasHeader('X-Requested-With') || !is_null($request->query('page'))) {
+        if($request->hasHeader('X-Requested-With')) {
+            return view('includes.studentlist', compact('students', 'groups'));
+        } else {
+            return view('layouts.students', compact('students', 'groups'));
+        }
+    }
+
+    public function search(Request $request, Student $student)
+    {
+        $searched = $request->query('name');
+        $students = DB::table('students')->where('name', 'like', '%'.$searched.'%')->get();
+        if($request->hasHeader('X-Requested-With')) {
             return view('includes.studentlist', compact('students', 'groups'));
         } else {
             return view('layouts.students', compact('students', 'groups'));
