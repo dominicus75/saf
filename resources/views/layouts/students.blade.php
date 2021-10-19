@@ -8,15 +8,14 @@
             display: grid;
             grid-template-columns: 1fr 4fr;
             grid-template-rows: auto auto;
-            grid-gap: 2rem;
+            grid-gap: 2vmax;
             justify-content: space-between;
             align-content: stretch;
         }
         form#students {
             display: grid;
-            grid-template-columns: auto auto;
-            margin-bottom: 1.9vmax;
-            height: 2rem;
+            grid-template-columns: 6fr 1fr;
+            margin-bottom: 2vmax;
         }
         input#nsearch {
             border-top: 1px solid #9ca8af;
@@ -25,15 +24,20 @@
             border-left: 1px solid #9ca8af;
             border-radius: 3px 0 0 3px;
             font-size: 1rem;
+            height: 2rem;
             padding-left: 0.5rem;
         }
         input#nsearch:focus { background-color: #34cae0; }
         button#nsearchb {
+            height: 2rem;
             border-top: 1px solid #9ca8af;
             border-right: 1px solid #9ca8af;
             border-bottom: 1px solid #9ca8af;
             border-left: 0;
             border-radius: 0 3px 3px 0;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
         }
         input#nsearch, button#nsearchb, ul#namelist {
             background-color: #e4e8eb;
@@ -52,7 +56,7 @@
         legend {
             vertical-align: middle;
             text-align: left;
-            padding: 1rem 1rem 1rem 0;
+            padding: 0.75rem 0.75rem 0.75rem 0;
         }
         label { font-weight: bold; }
         input[type="checkbox"]:checked + label {

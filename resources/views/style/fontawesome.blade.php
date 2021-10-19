@@ -13,7 +13,7 @@
         .fa {
             display: inline-block;
             font: normal normal normal 1rem/1 FontAwesome;
-            font-size: inherit;
+            font-size: 1rem;
             text-rendering: auto;
         }
         .fa-inverse { color: #ffffff; }
