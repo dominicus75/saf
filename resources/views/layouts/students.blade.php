@@ -16,6 +16,7 @@
             display: grid;
             grid-template-columns: 6fr 1fr;
             margin-bottom: 2vmax;
+            position: relative;
         }
         input#nsearch {
             border-top: 1px solid #9ca8af;
@@ -43,15 +44,13 @@
             background-color: #e4e8eb;
         }
         ul#namelist {
+            position: absolute;
+            top: 2rem;
             display: none;
+            width: 100%;
             border: 1px solid #9ca8af;
             border-radius: 0 0 3px 3px;
-            z-index: 1;
-        }
-        input#nsearch:focus ~ ul#namelist, input#nsearch:focus-within ~ ul#namelist {
-            display: block;
-        }
-        ul#namelist a {
+            padding-left: 0.5rem;
         }
         legend {
             vertical-align: middle;
@@ -82,16 +81,10 @@
 
 @section('main')
     <aside>
-        <form method="get" action="/search" id="students">
+        <form method="get" action="/search/students" id="students">
             <input type="search" id="nsearch" name="name" placeholder="Search for name">
             <button id="nsearchb"><i class="fa fa-search"></i></button>
             <ul id="namelist">
-                <li><a href="/students/1">student 1</a></li>
-                <li><a href="/students/2">student 2</a></li>
-                <li><a href="/students/3">student 3</a></li>
-                <li><a href="/students/4">student 4</a></li>
-                <li><a href="/students/5">student 5</a></li>
-                <li><a href="/students/6">student 6</a></li>
             </ul>
         </form>
         <form method="get" id="groups">
@@ -117,9 +110,9 @@
 
     @include('js.paginator')
 
-    window.addEventListener("load", function(event){ paginator('studentlist'); });
+    window.addEventListener('load', function(event){ paginator('studentlist'); });
 
-    document.getElementById("choose").addEventListener("click", function(event){
+    document.getElementById('choose').addEventListener('click', function(event){
         event.preventDefault();
         var choosen = document.querySelectorAll('input[type=checkbox]:checked');
         var url     = '/students?';
@@ -138,6 +131,30 @@
                 paginator('studentlist');
             }
         });
+    });
+
+    var nsearch  = document.getElementById('nsearch');
+    var nameList = document.getElementById('namelist');
+
+    nsearch.addEventListener('input', function(event) {
+        event.preventDefault();
+        let name = nsearch.value;
+        if (name.length > 1) {
+            ajax({
+                type: 'GET',
+                url: '/search/students?name=' + name,
+                success: function(response) {
+                    nameList.innerHTML = response;
+                    nameList.style.display = 'block';
+                    nameList.addEventListener('mouseleave', function(event) {
+                        nameList.style.display = 'none';
+                    });
+                    nsearch.addEventListener('mouseover', function(event) {
+                        nameList.style.display = 'block';
+                    });
+                }
+            });
+        }
     });
 
 </script>

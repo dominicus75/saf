@@ -56,13 +56,19 @@ class StudentController extends Controller
         }
     }
 
-    public function search(Request $request, Student $student)
+    public function search(
+        Request $request,
+        Student $student,
+        Studygroup $StudyGroup
+    )
     {
         $searched = $request->query('name');
-        $students = DB::table('students')->where('name', 'like', '%'.$searched.'%')->get();
         if($request->hasHeader('X-Requested-With')) {
-            return view('includes.studentlist', compact('students', 'groups'));
+            $students = $student->where('name', 'LIKE', $searched.'%')->get();
+            return view('includes.search', compact('students'));
         } else {
+            $students = $student->where('name', 'LIKE', $searched.'%')->paginate(10);
+            $groups   = $StudyGroup->all();
             return view('layouts.students', compact('students', 'groups'));
         }
     }

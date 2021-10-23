@@ -23,5 +23,5 @@ Route::resources([
     'studygroups' => StudyGroupController::class,
 ]);
 
-Route::get('/search', [StudentController::class, 'search']);
+Route::get('/search/students', [StudentController::class, 'search'])->name('search');
 
