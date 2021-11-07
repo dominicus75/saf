@@ -81,7 +81,7 @@
 
 @section('main')
     <aside>
-        <form method="get" action="/search/students" id="students">
+        <form method="get" action="/search/student" id="students">
             <input type="search" id="nsearch" name="name" placeholder="Search for name">
             <button id="nsearchb"><i class="fa fa-search"></i></button>
             <ul id="namelist">
@@ -142,7 +142,7 @@
         if (name.length > 1) {
             ajax({
                 type: 'GET',
-                url: '/search/students?name=' + name,
+                url: '/search/student?name=' + name,
                 success: function(response) {
                     nameList.innerHTML = response;
                     nameList.style.display = 'block';

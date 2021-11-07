@@ -1,6 +1,6 @@
     <header class="listHead">
         <h2><i class="fa fa-user-o"></i>&nbsp;{{ $students->total() }}&nbsp;STUDENTS</h2>
-        <div><i class="fa fa-edit"></i><a href="/students/create">New</a></div>
+        <div><i class="fa fa-edit"></i><a href="/create/student">New</a></div>
         {{ $students->links('includes.paginator') }}
     </header>
     <table>
@@ -23,9 +23,9 @@
                 <td>
 @forelse($student->studygroups as $group)
 @if ($loop->last)
-                    <a href="studygroups/{{ $group->id }}">{{ $group->name }}</a>
+                    <a href="/studygroups/{{ $group->id }}">{{ $group->name }}</a>
 @else
-                    <a href="studygroups/{{ $group->id }}">{{ $group->name }}</a>,
+                    <a href="/studygroups/{{ $group->id }}">{{ $group->name }}</a>,
 @endif
 @empty
                     <strong>- none -</strong>

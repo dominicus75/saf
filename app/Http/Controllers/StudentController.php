@@ -100,9 +100,10 @@ class StudentController extends Controller
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function show(Student $student, Studygroup $StudyGroup)
     {
-        //
+        $groups = $StudyGroup->all();
+        return view('layouts.student', compact('student', 'groups'));
     }
 
     /**

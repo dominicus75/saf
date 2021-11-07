@@ -35,9 +35,11 @@
 @section('script')
 <script>
 
-    var section = 'main';
-
     @include('js.ajax')
+
+    @include('js.paginator')
+
+    window.addEventListener('load', function(event){ paginator('main'); });
 
 </script>
 @endsection

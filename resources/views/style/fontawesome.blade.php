@@ -18,7 +18,9 @@
         }
         .fa-inverse { color: #ffffff; }
         .fa-user-o:before { content: "\f2c0"; }
+        .fa-file-text:before { content: "\f15c"; }
         .fa-edit:before { content: "\f044"; }
+        .fa-trash:before { content: "\f1f8"; }
         .fa-search:before { content: "\f002"; }
         .fa-arrow-left:before { content: "\f060"; }
         .fa-arrow-right:before { content: "\f061"; }

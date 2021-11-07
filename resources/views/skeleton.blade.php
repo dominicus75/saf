@@ -1,7 +1,7 @@
-@if (Request::is('students*'))
+@if (Request::is('students'))
     @section('class01', 'current')
     @section('class02', '')
-@elseif(Request::is('studygroups*'))
+@elseif(Request::is('studygroups'))
     @section('class01', '')
     @section('class02', 'current')
 @else
