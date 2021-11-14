@@ -100,10 +100,9 @@ class StudentController extends Controller
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student, Studygroup $StudyGroup)
+    public function show(Student $student)
     {
-        $groups = $StudyGroup->all();
-        return view('layouts.student', compact('student', 'groups'));
+        return view('layouts.student', compact('student'));
     }
 
     /**
@@ -114,7 +113,7 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        return view('layouts.student.edit', compact('student'));
     }
 
     /**

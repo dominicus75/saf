@@ -57,7 +57,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 5,
                     'name'        => 'Harwilll Thorp',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Jukui',
                     'birth_date'  => '2002-01-06',
                     'email'       => 'hthorp4@symantec.com',
@@ -66,7 +66,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 6,
                     'name'        => 'Elset Dillinger',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'La Montañita',
                     'birth_date'  => '1999-03-09',
                     'email'       => 'edillinger5@comcast.net',
@@ -75,7 +75,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 7,
                     'name'        => 'Glennis Romei',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Thetford-Mines',
                     'birth_date'  => '1990-11-04',
                     'email'       => 'gromei6@webeden.co.uk',
@@ -93,7 +93,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 9,
                     'name'        => 'Milena Harlow',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Rungis',
                     'birth_date'  => '2001-05-03',
                     'email'       => 'mharlow8@statcounter.com',
@@ -138,7 +138,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 14,
                     'name'        => 'Cam Bullimore',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Xugu',
                     'birth_date'  => '1997-01-08',
                     'email'       => 'cbullimored@plala.or.jp',
@@ -165,7 +165,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 17,
                     'name'        => 'Rollo Kneafsey',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Wukou',
                     'birth_date'  => '1990-09-17',
                     'email'       => 'rkneafseyg@shop-pro.jp',
@@ -183,7 +183,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 19,
                     'name'        => 'Nanci Biasini',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Ban Rangsit',
                     'birth_date'  => '1993-04-30',
                     'email'       => 'nbiasinii@edublogs.org',
@@ -192,7 +192,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 20,
                     'name'        => 'Xerxes Collisson',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Governador Valadares',
                     'birth_date'  => '1996-01-29',
                     'email'       => 'xcollissonj@cyberchimps.com',
@@ -237,7 +237,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 25,
                     'name'        => 'Kin Sylett',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Yiqi',
                     'birth_date'  => '2001-07-16',
                     'email'       => 'ksyletto@howstuffworks.com',
@@ -255,7 +255,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 27,
                     'name'        => 'Vaughan Domerque',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Gunajaya',
                     'birth_date'  => '1997-02-12',
                     'email'       => 'vdomerqueq@fastcompany.com',
@@ -300,7 +300,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 32,
                     'name'        => 'Cesya Trobridge',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Yūki',
                     'birth_date'  => '2001-06-07',
                     'email'       => 'ctrobridgev@instagram.com',
@@ -309,7 +309,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 33,
                     'name'        => 'Ebeneser Whitby',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'São Mateus',
                     'birth_date'  => '1991-12-05',
                     'email'       => 'ewhitbyw@zimbio.com',
@@ -336,7 +336,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 36,
                     'name'        => 'Vivianna McKerrow',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Huangxi',
                     'birth_date'  => '2000-10-01',
                     'email'       => 'vmckerrowz@youtu.be',
@@ -345,7 +345,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 37,
                     'name'        => 'Malva Paydon',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Houxixi',
                     'birth_date'  => '2002-09-13',
                     'email'       => 'mpaydon10@mac.com',
@@ -363,7 +363,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 39,
                     'name'        => 'Johna Pollak',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Ballylinan',
                     'birth_date'  => '2003-07-05',
                     'email'       => 'jpollak12@narod.ru',
@@ -408,7 +408,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 44,
                     'name'        => 'Gibbie Olyet',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Wutun',
                     'birth_date'  => '1995-05-27',
                     'email'       => 'golyet17@posterous.com',
@@ -417,7 +417,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 45,
                     'name'        => 'Fionnula Carnaman',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'El Calvario',
                     'birth_date'  => '2001-03-15',
                     'email'       => 'fcarnaman18@cam.ac.uk',
@@ -435,7 +435,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 47,
                     'name'        => 'Aldous Boriston',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Boroon',
                     'birth_date'  => '1999-02-24',
                     'email'       => 'aboriston1a@digg.com',
@@ -471,7 +471,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 51,
                     'name'        => 'Lynett Ogelsby',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Riosucio',
                     'birth_date'  => '1999-12-14',
                     'email'       => 'logelsby1e@artisteer.com',
@@ -498,7 +498,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 54,
                     'name'        => 'Helga Copner',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Kangmei',
                     'birth_date'  => '2002-11-15',
                     'email'       => 'hcopner1h@dell.com',
@@ -507,7 +507,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 55,
                     'name'        => 'Abigail Wordesworth',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Sivers’k',
                     'birth_date'  => '2001-01-16',
                     'email'       => 'awordesworth1i@istockphoto.com',
@@ -516,7 +516,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 56,
                     'name'        => 'Ivar Baish',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Kota Kinabalu',
                     'birth_date'  => '1992-07-17',
                     'email'       => 'ibaish1j@ebay.com',
@@ -534,7 +534,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 58,
                     'name'        => 'Roxanna Sherrin',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Rushankou',
                     'birth_date'  => '1995-11-08',
                     'email'       => 'rsherrin1l@blogspot.com',
@@ -543,7 +543,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 59,
                     'name'        => 'Byran Francke',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Ngembul',
                     'birth_date'  => '2001-02-09',
                     'email'       => 'bfrancke1m@google.co.uk',
@@ -552,7 +552,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 60,
                     'name'        => 'Corty Piddletown',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'San Angelo',
                     'birth_date'  => '1994-07-14',
                     'email'       => 'cpiddletown1n@apple.com',
@@ -561,7 +561,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 61,
                     'name'        => 'Nappy Archer',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Kuala Lumpur',
                     'birth_date'  => '1994-11-12',
                     'email'       => 'narcher1o@opera.com',
@@ -570,7 +570,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 62,
                     'name'        => 'Tod Addington',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Padangsidempuan',
                     'birth_date'  => '1991-07-23',
                     'email'       => 'taddington1p@deviantart.com',
@@ -588,7 +588,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 64,
                     'name'        => 'Humberto Stapylton',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Sukamulya',
                     'birth_date'  => '1994-05-18',
                     'email'       => 'hstapylton1r@comcast.net',
@@ -615,7 +615,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 67,
                     'name'        => 'Pail Duffan',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Guanting',
                     'birth_date'  => '1997-11-17',
                     'email'       => 'pduffan1u@flavors.me',
@@ -660,7 +660,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 72,
                     'name'        => 'Hillel Benasik',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Újezd',
                     'birth_date'  => '1996-05-25',
                     'email'       => 'hbenasik1z@oaic.gov.au',
@@ -687,7 +687,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 75,
                     'name'        => 'Beryl Buckle',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Badou',
                     'birth_date'  => '1999-11-05',
                     'email'       => 'bbuckle22@apple.com',
@@ -705,7 +705,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 77,
                     'name'        => 'Beniamino Pointing',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Tosu',
                     'birth_date'  => '1993-03-04',
                     'email'       => 'bpointing24@furl.net',
@@ -750,7 +750,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 82,
                     'name'        => 'Delila Phlippi',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'De la Paz',
                     'birth_date'  => '2000-09-26',
                     'email'       => 'dphlippi29@forbes.com',
@@ -768,7 +768,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 84,
                     'name'        => 'Licha Brise',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Vilarinho da Castanheira',
                     'birth_date'  => '1998-10-23',
                     'email'       => 'lbrise2b@google.cn',
@@ -786,7 +786,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 86,
                     'name'        => 'Hermia Barkway',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Áno Kalentíni',
                     'birth_date'  => '1998-04-03',
                     'email'       => 'hbarkway2d@friendfeed.com',
@@ -795,7 +795,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 87,
                     'name'        => 'Belicia Altree',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Sijunjung',
                     'birth_date'  => '2002-06-28',
                     'email'       => 'baltree2e@earthlink.net',
@@ -804,7 +804,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 88,
                     'name'        => 'Thain Hallstone',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Hongyi',
                     'birth_date'  => '1991-12-12',
                     'email'       => 'thallstone2f@goo.ne.jp',
@@ -822,7 +822,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 90,
                     'name'        => 'Darb Brame',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Tivat',
                     'birth_date'  => '1998-12-02',
                     'email'       => 'dbrame2h@smugmug.com',
@@ -831,7 +831,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 91,
                     'name'        => 'Wilie Glaum',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Xushuguan',
                     'birth_date'  => '1990-09-22',
                     'email'       => 'wglaum2i@prlog.org',
@@ -840,7 +840,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 92,
                     'name'        => 'Dietrich Hulks',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Boncis',
                     'birth_date'  => '1999-02-23',
                     'email'       => 'dhulks2j@flickr.com',
@@ -867,7 +867,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 95,
                     'name'        => 'Raviv Gillhespy',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Barra do Bugres',
                     'birth_date'  => '1996-04-05',
                     'email'       => 'rgillhespy2m@eepurl.com',
@@ -885,7 +885,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 97,
                     'name'        => 'Jeniece Embling',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Líně',
                     'birth_date'  => '1997-02-13',
                     'email'       => 'jembling2o@cbslocal.com',
@@ -903,7 +903,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 99,
                     'name'        => 'Gilbertine Ruf',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Chambellan',
                     'birth_date'  => '1990-11-03',
                     'email'       => 'gruf2q@mac.com',
@@ -912,7 +912,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 100,
                     'name'        => 'Pierce Greguoli',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Sarangmeduro',
                     'birth_date'  => '1994-03-28',
                     'email'       => 'pgreguoli2r@stumbleupon.com',
@@ -921,7 +921,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 101,
                     'name'        => 'Kristine Daintree',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Grand Rapids',
                     'birth_date'  => '1997-01-12',
                     'email'       => 'kdaintree2s@sina.com.cn',
@@ -975,7 +975,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 107,
                     'name'        => 'Greggory Menezes',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Wangjiachang',
                     'birth_date'  => '1997-12-28',
                     'email'       => 'gmenezes2y@reference.com',
@@ -993,7 +993,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 109,
                     'name'        => 'Marge Scherme',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'San Javier',
                     'birth_date'  => '1994-06-17',
                     'email'       => 'mscherme30@nps.gov',
@@ -1002,7 +1002,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 110,
                     'name'        => 'Ermentrude Thaw',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Bluri',
                     'birth_date'  => '1991-11-20',
                     'email'       => 'ethaw31@omniture.com',
@@ -1020,7 +1020,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 112,
                     'name'        => 'Nisse Shackelton',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Tangzhai',
                     'birth_date'  => '1998-03-07',
                     'email'       => 'nshackelton33@nifty.com',
@@ -1029,7 +1029,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 113,
                     'name'        => 'Charlton Loveless',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Mirnyy',
                     'birth_date'  => '1993-05-13',
                     'email'       => 'cloveless34@dion.ne.jp',
@@ -1047,7 +1047,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 115,
                     'name'        => 'Ulla Slott',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Kribi',
                     'birth_date'  => '1998-11-22',
                     'email'       => 'uslott36@linkedin.com',
@@ -1065,7 +1065,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 117,
                     'name'        => 'Joseito Skentelbery',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Hechun',
                     'birth_date'  => '1992-05-01',
                     'email'       => 'jskentelbery38@i2i.jp',
@@ -1110,7 +1110,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 122,
                     'name'        => 'Brantley Caiger',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Eloúnda',
                     'birth_date'  => '1991-10-01',
                     'email'       => 'bcaiger3d@berkeley.edu',
@@ -1137,7 +1137,7 @@ class StudentSeeder extends Seeder
                  [
                     'id'          => 125,
                     'name'        => 'Jobey Melsom',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Dagohoy',
                     'birth_date'  => '2001-06-27',
                     'email'       => 'jmelsom3g@ftc.gov',
@@ -1155,7 +1155,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 127,
                     'name'        => 'Odella Lorain',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Vin’kivtsi',
                     'birth_date'  => '1997-03-10',
                     'email'       => 'olorain3i@scribd.com',
@@ -1164,7 +1164,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 128,
                     'name'        => 'Berrie Foux',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Crumlin',
                     'birth_date'  => '1991-04-07',
                     'email'       => 'bfoux3j@123-reg.co.uk',
@@ -1209,7 +1209,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 133,
                     'name'        => 'Marcela Concklin',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Adraskan',
                     'birth_date'  => '1993-11-06',
                     'email'       => 'mconcklin3o@friendfeed.com',
@@ -1227,7 +1227,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 135,
                     'name'        => 'King Kinnard',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Kashihara',
                     'birth_date'  => '2003-05-06',
                     'email'       => 'kkinnard3q@sciencedaily.com',
@@ -1236,7 +1236,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 136,
                     'name'        => 'Silvain Slatten',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Shahe',
                     'birth_date'  => '1999-06-16',
                     'email'       => 'sslatten3r@utexas.edu',
@@ -1280,8 +1280,8 @@ class StudentSeeder extends Seeder
                 ],
                 [
                     'id'          => 141,
-                    'name'        => 'Vitia Ifill',
-                    'sex'         => 'Female',
+                    'name'        => 'Vito Ifill',
+                    'sex'         => 'Male',
                     'birth_place' => 'Vladimir',
                     'birth_date'  => '1991-12-27',
                     'email'       => 'vifill3w@webmd.com',
@@ -1308,7 +1308,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 144,
                     'name'        => 'Bennie Hizir',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Gaxung',
                     'birth_date'  => '2000-12-08',
                     'email'       => 'bhizir3z@google.pl',
@@ -1326,7 +1326,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 146,
                     'name'        => 'Kitti Toler',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Le Havre',
                     'birth_date'  => '1991-10-08',
                     'email'       => 'ktoler41@discovery.com',
@@ -1353,7 +1353,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 149,
                     'name'        => 'Kore Castillon',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Las Lomas',
                     'birth_date'  => '1994-05-21',
                     'email'       => 'kcastillon44@comsenz.com',
@@ -1380,7 +1380,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 152,
                     'name'        => 'Lurleen Bernaldez',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Zhemtala',
                     'birth_date'  => '1993-03-17',
                     'email'       => 'lbernaldez47@istockphoto.com',
@@ -1389,7 +1389,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 153,
                     'name'        => 'Gabriela Nockells',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Svilajnac',
                     'birth_date'  => '1996-02-05',
                     'email'       => 'gnockells48@netvibes.com',
@@ -1407,7 +1407,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 155,
                     'name'        => 'Karim Caird',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'København',
                     'birth_date'  => '1991-04-28',
                     'email'       => 'kcaird4a@vistaprint.com',
@@ -1434,7 +1434,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 158,
                     'name'        => 'Bartholomeo Ricart',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Tembol',
                     'birth_date'  => '1997-12-29',
                     'email'       => 'bricart4d@ow.ly',
@@ -1443,7 +1443,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 159,
                     'name'        => 'Immanuel McLaverty',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Pillpinto',
                     'birth_date'  => '2002-03-06',
                     'email'       => 'imclaverty4e@51.la',
@@ -1461,7 +1461,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 161,
                     'name'        => 'Jeno Harken',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Lorena',
                     'birth_date'  => '1996-01-30',
                     'email'       => 'jharken4g@hexun.com',
@@ -1488,7 +1488,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 164,
                     'name'        => 'Jesse Heball',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Nice',
                     'birth_date'  => '1995-10-27',
                     'email'       => 'jheball4j@instagram.com',
@@ -1497,7 +1497,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 165,
                     'name'        => 'Donnell Coulthurst',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Santa Rosa',
                     'birth_date'  => '1995-02-02',
                     'email'       => 'dcoulthurst4k@wikimedia.org',
@@ -1515,7 +1515,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 167,
                     'name'        => 'Keir Wybrow',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Lembursawah',
                     'birth_date'  => '1998-11-06',
                     'email'       => 'kwybrow4m@list-manage.com',
@@ -1524,7 +1524,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 168,
                     'name'        => 'Karylin Strognell',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Xiashitai',
                     'birth_date'  => '1999-07-15',
                     'email'       => 'kstrognell4n@istockphoto.com',
@@ -1533,7 +1533,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 169,
                     'name'        => 'Cynthea Newcom',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Saint-Brieuc',
                     'birth_date'  => '1993-08-07',
                     'email'       => 'cnewcom4o@mayoclinic.com',
@@ -1560,7 +1560,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 172,
                     'name'        => 'Minny Cropp',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Longquan',
                     'birth_date'  => '1998-07-13',
                     'email'       => 'mcropp4r@ebay.com',
@@ -1578,7 +1578,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 174,
                     'name'        => 'Emile Itzhak',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'San Pedro de Macorís',
                     'birth_date'  => '2000-06-26',
                     'email'       => 'eitzhak4t@jalbum.net',
@@ -1596,7 +1596,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 176,
                     'name'        => 'Ronda Derbyshire',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Al Qanāwiş',
                     'birth_date'  => '2002-06-07',
                     'email'       => 'rderbyshire4v@pinterest.com',
@@ -1632,7 +1632,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 180,
                     'name'        => 'Janka Blethin',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Zhexiao',
                     'birth_date'  => '1995-10-16',
                     'email'       => 'jblethin4z@over-blog.com',
@@ -1659,7 +1659,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 183,
                     'name'        => 'Chrissie Althorp',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Šabac',
                     'birth_date'  => '1993-01-09',
                     'email'       => 'calthorp52@nature.com',
@@ -1668,7 +1668,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 184,
                     'name'        => 'Vida Fisher',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Minador do Negrão',
                     'birth_date'  => '2001-09-28',
                     'email'       => 'vfisher53@dot.gov',
@@ -1695,7 +1695,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 187,
                     'name'        => 'Verena Jakobsson',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Pālang',
                     'birth_date'  => '1997-02-26',
                     'email'       => 'vjakobsson56@sakura.ne.jp',
@@ -1704,7 +1704,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 188,
                     'name'        => 'Ruperto Dedenham',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Ciwaru',
                     'birth_date'  => '1992-02-07',
                     'email'       => 'rdedenham57@constantcontact.com',
@@ -1722,7 +1722,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 190,
                     'name'        => 'Codee Snar',
-                    'sex'         => 'Female',
+                    'sex'         => 'Male',
                     'birth_place' => 'Mintian',
                     'birth_date'  => '2000-09-13',
                     'email'       => 'csnar59@tinypic.com',
@@ -1731,7 +1731,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 191,
                     'name'        => 'Goldina Nadin',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Nantes',
                     'birth_date'  => '1991-12-27',
                     'email'       => 'gnadin5a@yellowpages.com',
@@ -1749,7 +1749,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 193,
                     'name'        => 'Staffard Fontaine',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Morcolla',
                     'birth_date'  => '2001-10-29',
                     'email'       => 'sfontaine5c@soup.io',
@@ -1767,7 +1767,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 195,
                     'name'        => 'Ethelbert Joan',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Yongjiu',
                     'birth_date'  => '1993-04-29',
                     'email'       => 'ejoan5e@hostgator.com',
@@ -1803,7 +1803,7 @@ class StudentSeeder extends Seeder
                 [
                     'id'          => 199,
                     'name'        => 'Robb Sugar',
-                    'sex'         => 'Male',
+                    'sex'         => 'Female',
                     'birth_place' => 'Gaibei',
                     'birth_date'  => '2002-09-30',
                     'email'       => 'rsugar5i@freewebs.com',
