@@ -111,9 +111,10 @@ class StudentController extends Controller
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit(Request $request, Student $student, Studygroup $StudyGroup)
     {
-        return view('layouts.student.edit', compact('student'));
+        $groups = $StudyGroup->all();
+        return view('layouts.student.edit', compact('student', 'groups'));
     }
 
     /**
@@ -125,7 +126,10 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        #$student->update($request->all());
+        return redirect()->route('students.index')
+                        ->with('success','Post updated successfully');
+        #return view('layouts.student.edit', compact('student', 'groups'));
     }
 
     /**

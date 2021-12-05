@@ -18,19 +18,19 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [StudentController::class, 'index']);
 
-Route::get('/students', [StudentController::class, 'index']);
-Route::get('/students/{student}', [StudentController::class, 'show']);
-Route::get('/students/{student}/edit', [StudentController::class, 'edit']);
-Route::post('/students/{student}/edit', [StudentController::class, 'update']);
-Route::get('/create/student', [StudentController::class, 'create']);
-Route::post('/create/student', [StudentController::class, 'store']);
-Route::get('/students/{student}/delete', [StudentController::class, 'destroy']);
-Route::get('/search/student', [StudentController::class, 'search'])->name('search');
+Route::get('/students', [StudentController::class, 'index'])->name('students.index');
+Route::get('/students/{student}', [StudentController::class, 'show'])->name('students.show');
+Route::get('/students/{student}/edit', [StudentController::class, 'edit'])->name('students.edit');
+Route::post('/students/{student}/update', [StudentController::class, 'update'])->name('students.update');
+Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
+Route::post('/students/store', [StudentController::class, 'store'])->name('students.store');
+Route::get('/students/{student}/delete', [StudentController::class, 'destroy'])->name('students.destroy');
+Route::get('/search/student', [StudentController::class, 'search'])->name('students.search');
 
-Route::get('/studygroups', [StudyGroupController::class, 'index']);
-Route::get('/studygroups/{id}', [StudyGroupController::class, 'show']);
-Route::get('/studygroups/{id}/edit', [StudyGroupController::class, 'edit']);
-Route::post('/studygroups/{id}/edit', [StudyGroupController::class, 'update']);
-Route::get('/studygroups/create', [StudyGroupController::class, 'create']);
-Route::post('/studygroups/create', [StudyGroupController::class, 'store']);
-Route::get('/studygroups/{id}/delete', [StudyGroupController::class, 'destroy']);
+Route::get('/studygroups', [StudyGroupController::class, 'index'])->name('studygroups.index');
+Route::get('/studygroups/{id}', [StudyGroupController::class, 'show'])->name('studygroups.show');
+Route::get('/studygroups/{id}/edit', [StudyGroupController::class, 'edit'])->name('studygroups.edit');
+Route::post('/studygroups/{id}/update', [StudyGroupController::class, 'update'])->name('studygroups.update');
+Route::get('/studygroups/create', [StudyGroupController::class, 'create'])->name('studygroups.create');
+Route::post('/studygroups/store', [StudyGroupController::class, 'store'])->name('studygroups.store');
+Route::get('/studygroups/{id}/delete', [StudyGroupController::class, 'destroy'])->name('studygroups.destroy');

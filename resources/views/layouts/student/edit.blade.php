@@ -55,7 +55,9 @@
 @endsection
 
 @section('main')
-    <form method="get" id="groups">
+    <form method="post" action="/students/{{ $student->id }}/update" id="update">
+        @csrf
+
         <fieldset>
             <legend>Editing {{ $student->name }}'s datas</legend>
             <label for="name">Name:</label><br>
@@ -82,13 +84,15 @@
             <input type="text" id="birth_date" name="birth_date" value="{{ $student->birth_date }}"><br>
             <label for="email">E-mail:</label><br>
             <input type="text" id="email" name="email" value="{{ $student->email }}"><br>
-@forelse($student->studygroups as $group)
+@foreach($groups as $group)
+        @if($student->studygroups->contains($group->id))
             <input type="checkbox" id="{{ $group->id }}" name="choosen[]" value="{{ $group->id }}" checked>
+        @else
+            <input type="checkbox" id="{{ $group->id }}" name="choosen[]" value="{{ $group->id }}">
+        @endif
             <label for="{{ $group->id }}">{{ $group->name }}</label><br>
-@empty
-            <strong>- none -</strong>
-@endforelse
-
+@endforeach
+            <input type="submit" id="submit" value="Save changes">
         </fieldset>
     </form>
 @endsection
