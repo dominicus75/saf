@@ -10,7 +10,4 @@ class Enrolling extends Model
 {
     use HasFactory;
 
-    public function studentsBelongsToGroups(array $groups) {
-
-    }
 }

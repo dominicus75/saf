@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use App\Models\Studygroup;
+use App\Models\Enrolling;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -126,10 +127,47 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        #$student->update($request->all());
-        return redirect()->route('students.index')
-                        ->with('success','Post updated successfully');
-        #return view('layouts.student.edit', compact('student', 'groups'));
+        $validated = $request->validate([
+            'name' => 'regex:/^[a-zA-Z\s\']{2,40}$/i',
+            'sex' => ['regex:/^(Male|Female|Other)$/'],
+            'birth_place' => 'regex:/^[a-zA-Z-\'\s]{2,40}$/i',
+            'birth_date' => 'regex:/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/',
+            'email' => 'regex:/^.+@.+$/',
+            'groups' => 'array|max:4'
+        ]);
+
+        foreach($validated as $key => $value) {
+            if(!is_array($value)) {
+                $student->$key = $value;
+            } else {
+                $enrolled = $student->studygroups->count();
+                $choosen  = count($value);
+                if($enrolled > $choosen) {
+                    foreach($student->studygroups as $studygroup) {
+                        if(!in_array($studygroup->id, $value)) {
+                            $group = Enrolling::where([
+                                ['student_id', '=', $student->id],
+                                ['study_group_id', '=', $studygroup->id]
+                            ]);
+                            $group->delete();
+                        }
+                    }
+                } elseif($enrolled < $choosen) {
+                    foreach($value as $studygroup) {
+                        if(!$student->studygroups->contains($studygroup)) {
+                            $enrolling = new Enrolling;
+                            $enrolling->student_id = $student->id;
+                            $enrolling->study_group_id = $studygroup;
+                            $enrolling->save();
+                        }
+                    }
+                }
+            }
+        }
+
+        $student->save();
+
+        return redirect()->route('students.show', $student->id)->with('success','Student updated successfully');
     }
 
     /**

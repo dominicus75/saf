@@ -18,6 +18,8 @@ class CreateEnrollingsTable extends Migration
         Schema::create('enrollings', function (Blueprint $table) {
             $table->foreignIdFor(Student::class);
             $table->foreignIdFor(StudyGroup::class);
+            $table->dateTime('created_at')->useCurrent();
+            $table->dateTime('updated_at')->useCurrent();
             $table->primary(['student_id', 'study_group_id']);
         });
 

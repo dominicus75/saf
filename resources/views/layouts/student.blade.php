@@ -57,6 +57,9 @@
 @section('main')
     <header class="listHead">
         <h2>{{ $student->name }}</h2>
+        @if (Session::has('success'))
+            <p>{{ Session::get('success') }}</p>
+        @endif
         <ul>
             <li><a href="/students/{{ $student->id }}/edit"><i class="fa fa-edit"></i>Edit</a></li>
             <li><a href="/students/{{ $student->id }}/delete"><i class="fa fa-trash"></i>Delete</a></li>
